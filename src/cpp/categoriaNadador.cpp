@@ -8,7 +8,7 @@ int main (){
     cout << "Informe, por gentileza, sua idade: ";
     cin >> idade;
 
-     if(idade >= 7 && idade <= 12){
+    if(idade >= 7 && idade <= 12){
         categoria = "infantil";
     }else if(idade >= 13 && idade <= 17){
         categoria = "juvenil";
