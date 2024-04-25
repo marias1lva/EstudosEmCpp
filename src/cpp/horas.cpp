@@ -9,7 +9,7 @@ int main (){
     cin >> minutos;
     
     if (horas > 0 && horas < 23 && minutos >= 0 && minutos <= 59){
-        cout << "Esse horario eh valido." << endl;
+        cout << "Esse horario eh valido, " << horas << "h" << minutos << "m" << endl;
     }else{
         cout << "Esse horario eh invalido." << endl;
     }
