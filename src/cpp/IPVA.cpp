@@ -8,13 +8,12 @@ int main (){
 
     while (true){
         cout << "Por favor, informe o numero correspondente ao mes atual (1 a 12): ";
-    cin >> mesAtual;
-    
-    if (mesAtual >= 1 && mesAtual <= 12){
+        cin >> mesAtual;
+        if (mesAtual >= 1 && mesAtual <= 12){
         break;
-    }else{
+        }else{
         cout << "Mes invalido." << endl;
-    }
+        }   
     }
     
     cout << "Agora informe os quatro digitos da placa do veiculo. ";
