@@ -14,7 +14,7 @@ int main(){
     conta1 = conta1 + juros1;
     juros2 = (conta2 * 2) / 100;
     conta2 = conta2 + juros2;
-    salarioDepois = salarioAntes - (conta1 + conta2);
+    salarioDepois = salarioAntes - conta1 - conta2;
     cout << "Salario apos pagar contas: R$" << salarioDepois;
     return 0;
 }
