@@ -10,7 +10,7 @@ int main(){
     }else if(num < 0){
         cout << num << " eh NEGATIVO.";
     }else if(num == 0){
-        cout << "Zero eh um numero NEUTRO.";
+        cout << "0 eh um numero NEUTRO.";
     }
     return 0;
 }
