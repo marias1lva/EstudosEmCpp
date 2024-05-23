@@ -5,7 +5,7 @@ int main(){
     int i, iMulheres = 0, iHomens = 0; //contador, contador de mulheres, contador de homens;
     float altura, mediaTotal, somaAlturas = 0, somaHomens = 0, somaMulheres = 0, mediaMulheres, mediaHomens;
     char sexo;
-    for(i = 1; i <= 5; i++){
+    for(i = 1; i <= 10; i++){
         cout << "Informe seu sexo(F/M): ";
         cin >> sexo;
         cout << "Informe sua altura(m): ";
@@ -19,7 +19,7 @@ int main(){
             iHomens++;
         }
     }
-    mediaTotal = somaAlturas / 5;
+    mediaTotal = somaAlturas / 10;
     mediaMulheres = somaMulheres / iMulheres;
     mediaHomens = somaHomens / iHomens;
     cout << "Media da altura de todas as pessoas: " << mediaTotal << "m. " << endl;
