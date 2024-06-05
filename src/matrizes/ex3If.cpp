@@ -7,7 +7,7 @@ int main(){
     for(i = 0; i < 4; i++){
         for(j = 0; j < 4; j++){
             cin >> matriz[i][j];
-            if (i != j && i + j != 3){
+            if (i != j && i + j != 3){ /*explicacao abaixo*/
                 somatorio = somatorio + matriz[i][j];
             }
         }
@@ -35,5 +35,7 @@ int main(){
     matriz[2][1]
     matriz[3][0]
 
-    i != j: Este trecho verifica se o elemento não está na diagonal principal.
+    → i != j: Este trecho verifica se o elemento não está na diagonal principal.
+    → i + j != 3: Este trecho verifica se o elemento não está na diagonal secundária.
+    → Só somamos matriz[i][j] a somatorio se ambas as condições forem verdadeiras, ou seja, o elemento não está nem na diagonal principal nem na diagonal secundária.
 */
