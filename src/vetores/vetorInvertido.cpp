@@ -8,7 +8,7 @@ int main(){
        cin >> vetor[i]; 
     }
     cout << "Vetor na ordem inversa: " << endl;
-    for(i = 7; i > 0; i--){
+    for(i = 6; i >= 0; i--){  // Inicializa i com o índice do último elemento e decrementa até o primeiro
         cout << vetor[i] << " ";
     }
     return 0;
