@@ -12,3 +12,5 @@ int main(){
     cout << "Resultado = " << calcula(x, y);
     return 0;
 }
+
+// Retorna o primeiro return que apareceu
