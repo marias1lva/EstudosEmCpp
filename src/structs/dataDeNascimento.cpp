@@ -22,10 +22,20 @@ void exibeData(dataNascimento data){
     cout << data.dia << "/" << data.mes << "/" << data.ano;
 }
 
+int calculaIdade(dataNascimento dataNasc, int anoAtual){
+    return anoAtual - dataNasc.ano;
+}
+
+bool validaIdade(int idade, dataNascimento data, int anoAtual){
+    return calculaIdade(data, anoAtual) > idade;
+}
+
 int main(){
     srand(time(0));
     Pessoa pessoas[10];
-    int n;
+    int n, anoAtual;
+    cout << "Informe o ano atual: ";
+    cin >> anoAtual;
     cout << "Quantas pessoas deseja cadastrar? (valor maximo de 10 pessoas) ";
     cin >> n;
     if(n > 10){
@@ -41,7 +51,18 @@ int main(){
     for(int i = 0; i < n; i++){
         cout << "Nome: " << pessoas[i].nome << ". Data de nascimento: ";
         exibeData(pessoas[i].nascimento);
-        cout << endl;
+        cout << ". Idade: " << calculaIdade(pessoas[i].nascimento, anoAtual) << " anos." << endl;
+    }
+    int idadeRef;
+    cout << endl << "Digite uma idade para listar pessoas mais velhas: ";
+    cin >> idadeRef;
+    cout << endl << "Pessoas mais velhas que " << idadeRef << " anos: " << endl;
+    for(int i = 0; i < n; i++){
+        if(validaIdade(idadeRef, pessoas[i].nascimento, anoAtual)){
+            cout << pessoas[i].nome << " (";
+            exibeData(pessoas[i].nascimento);
+            cout << ")." << endl;
+        }
     }
     return 0;
 }
